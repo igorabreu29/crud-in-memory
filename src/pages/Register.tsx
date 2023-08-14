@@ -38,7 +38,7 @@ export function Register() {
   }
 
   return (
-    <div className="h-[90vh] overflow-auto overflow-hidden-y flex items-center justify-center">
+    <div className="h-[90vh] overflow-auto overflow-y-hidden flex items-center justify-center">
       <form
         className="flex items-center justify-center flex-col gap-3 p-4 bg-zinc-950 rounded w-[18rem]"
         onSubmit={handleSubmit(handleCreateUser)}
