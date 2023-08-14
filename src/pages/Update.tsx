@@ -47,7 +47,7 @@ export function Update() {
   }
 
   return (
-    <div className="h-[90vh] overflow-auto overflow-y-hidden flex items-center justify-center flex-col gap-4">
+    <div className="h-[90vh] overflow-y-hidden flex items-center justify-center flex-col gap-4">
       <h2 className="text-3xl font-bold">Update User</h2>
       <form
         onSubmit={handleSubmit(handleUpdateUser)}
