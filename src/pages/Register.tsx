@@ -44,13 +44,14 @@ export function Register() {
         onSubmit={handleSubmit(handleCreateUser)}
       >
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="name" className="text-gray-500">
+          <label htmlFor="name" className="text-gray-500 text-sm sm:text-base">
             Name:
           </label>
           <input
             type="text"
+            autoComplete="off"
             placeholder="Type your name..."
-            className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+            className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-gray-300 text-sm sm:text-base placeholder:text-gray-500"
             {...register('name')}
           />
           {errors.name && (
@@ -58,13 +59,14 @@ export function Register() {
           )}
         </div>
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="email" className="text-gray-500">
+          <label htmlFor="email" className="text-gray-500 text-sm sm:text-base">
             Email:
           </label>
           <input
             type="email"
+            autoComplete="off"
             placeholder="Type your email..."
-            className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+            className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-sm sm:text-base text-gray-300 placeholder:text-gray-500"
             {...register('email')}
           />
           {errors.email && (
@@ -72,13 +74,16 @@ export function Register() {
           )}
         </div>
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="password" className="text-gray-500">
+          <label
+            htmlFor="password"
+            className="text-gray-500 text-sm sm:text-base"
+          >
             Password:
           </label>
           <input
             type="password"
             placeholder="Type your password..."
-            className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+            className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-sm sm:text-base text-gray-300 placeholder:text-gray-500"
             {...register('password')}
           />
           {errors.password && (

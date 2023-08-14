@@ -54,29 +54,34 @@ export function Update() {
         className="flex items-center justify-center flex-col gap-3 p-4 bg-blue-950 rounded w-[18rem]"
       >
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="name" className="text-gray-500">
+          <label htmlFor="name" className="text-gray-500 text-sm sm:text-base">
             Name:
           </label>
           <input
             type="text"
-            {...register('name')}
+            className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-sm sm:text-base text-gray-300 placeholder:text-gray-500"
+            autoComplete="off"
             defaultValue={user?.name}
-            className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+            {...register('name')}
           />
         </div>
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="email" className="text-gray-500">
+          <label htmlFor="email" className="text-gray-500 text-sm sm:text-base">
             Email:
           </label>
           <input
             type="email"
-            {...register('email')}
+            className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-sm sm:text-base text-gray-300 placeholder:text-gray-500"
             defaultValue={user?.email}
-            className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+            autoComplete="off"
+            {...register('email')}
           />
         </div>
         <div className="flex items-start justify-center flex-col w-full">
-          <label htmlFor="password" className="text-gray-500">
+          <label
+            htmlFor="password"
+            className="text-gray-500 text-sm sm:text-base"
+          >
             Password:
           </label>
           <div className="w-full flex items-center justify-start gap-1">
@@ -84,7 +89,7 @@ export function Update() {
               type={alternateType ? 'text' : 'password'}
               {...register('password')}
               defaultValue={user?.password}
-              className="w-full h-8 rounded bg-transparent outline-none text-gray-300 placeholder:text-gray-500"
+              className="w-full h-12 sm:h-8 rounded bg-transparent outline-none text-sm sm:text-base text-gray-300 placeholder:text-gray-500"
             />
             <button
               type="button"
